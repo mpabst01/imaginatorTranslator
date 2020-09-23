@@ -2,7 +2,7 @@
 
   .bg-image {
       
-    background-image: url(/Users/apple/starWarsTrivia/starWarsQuiz/1200px-Hyades.jpg);
+    background-image: url("https://github.com/mpabst01/starWarsTrivia/blob/home-page-html/1200px-Hyades.jpg?raw=true");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
