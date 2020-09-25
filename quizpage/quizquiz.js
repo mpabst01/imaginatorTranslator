@@ -90,38 +90,43 @@ function retrieveAns(){
                 for (i in correctAnswer[0, 2]){
                     $.ajax({
                         method: "GET",
-                        url: queryUrl + thingsUrl[5],
-                        data: data});
+                        url: queryUrl + thingsUrl[5]
+                        })
                     }
 
                 for (i in correctAnswer[1, 2, 4]){
                     $.ajax({
                         method: "GET",
-                        url: queryUrl + thingsUrl[0],
-                        data: data})
+                        url: queryUrl + thingsUrl[0]
+                        })
                 }
                 for (i in correctAnswer[5]){
                     $.ajax({
                         method: "GET",
-                        url: queryUrl + thingsUrl[4],
-                        data: data})
+                        url: queryUrl + thingsUrl[4]
+                        })
                 }
                 for (i in correctAnswer[6]){
                     $.ajax({
                         method: "GET",
-                        url: queryUrl + thingsUrl[3],
-                        data: data }
+                        url: queryUrl + thingsUrl[3]
+                        
+                    
             
-            }).done(function (data) {
-                if (!data.next) {
-                }
+                    }).done(function (data) {
+                        if (!data.next) {
+                        }
             // display correct answer in the text area
-                console.log(correctAnswer);
-                $("#results").val(JSON.stringify(correctAnswer, null, 2));
-                return;
-                },
-                answerCorrect(data.next)
-            };
+                        console.log(answerCorrect[i]);
+                        $("#results").val(JSON.stringify(correctAnswer, null, 2));
+                        return; 
+                    }
+                    (answerCorrect[i])(data.next);
+                });
+            }
+            $("#send").on("click", function () {
+                answerCorrect(queryUrl);
+            });
             //var people = [];
             //var films = [];
             //var starships = [];
@@ -129,12 +134,7 @@ function retrieveAns(){
             //var species = [];
             //var planets = [];
            //var correctAnswer = {people: (JSON.stringify(people, null, 2))", films: $("#results").val(JSON.stringify(films, null, 2)), starships: $("#results").val(JSON.stringify(starships, null, 2)), transport: $("#results").val(JSON.stringify(transport, null, 2)), species: $("#results").val(JSON.stringify(species, null, 2)), planets: $("#results").val(JSON.stringify(planets, null, 2))};
-            
-           
-
-    $("#send").on("click", function () {
-        answerCorrect(queryUrl);
-    });
+           console.log();
 
 }
 
