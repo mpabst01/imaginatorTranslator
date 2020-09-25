@@ -1,68 +1,101 @@
-
-
+/* BACKGROUND IMAGE FOR MAIN PAGE */
   .bg-image {
       
-    background-image: url(/Users/apple/starWarsTrivia/starWarsQuiz/1200px-Hyades.jpg);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hyades.jpg/1024px-Hyades.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
     }
+/* BACKGROUND IMAGE FOR LIGHT SIDE PAGE */
+  .bg-image1 {
+      
+    background-image: url(artwork_circumbinary_planet.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+      }
+  
+ /* BACKGROUND IMAGE FOR DARK SIDE PAGE */      
+   .bg-image2 {
+      
+     background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/03/7-1.png);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     background-color: #464646;
+           }   
+           
+  /* BACKGROUND IMAGE FOR GAME OVER SCREEN */         
+           
+  .bg-image3 {
+      
+      background-image: url(https://wallpaperaccess.com/full/2137903.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: #464646;
+                  } 
 
-    .galactic {
-        letter-spacing: 2px;
+           
+      
+/* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
+   .page-welcome {
+     text-align: center;
+     font-family: arial;
+     color: white;
+     font-size: 15px;
+     background-color: rgb(0, 0, 0);
+     opacity: 0.7;
+     
         
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        text-align: center;
-        max-width: 600px;
     }
 
-    .page-info {
-        text-align: center;
-        font-family: Monaco;
-        color: white;
-        font-size: 20px;
-        background-color: rgb(10, 14, 27);
-        
-        
-    
-    }
 
-    .star-title {
-        font-size: 70px;
-        padding: 40px;
-        color: lightblue;
 
-    }
-
-  .title-header {
-      background-color: black;
-      font-size: 1.2em;
-      font-family: 'Star Jedi', arial;
-      font-size: 48px;
-      text-shadow: 2px 2px 2px #aaa;
-      color: white;
-      padding: 2px 2px 10px 2px;
+    /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
+   .header-main1, .header-main2 {
+      margin: 0 auto;
       text-align: center;
-  }
+        
+   }
 
-  .main-text {
-    font-family: 'Star Jedi', arial;
-    font-size: 100px;
-    text-shadow: 2px 2px 2px #aaa;
-    color: white;
-    letter-spacing: 8px;
-  }
+   .header1-page-2, .header1-page-3 {
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px 10px 10px 10px;
+   }
 
-  .light-dark-images {
+   .header2-page-2 {
+     margin: 0 auto;
+     text-align: center;
+     padding: 10px 10px 10px 10px; 
+   }
+   
+
+  .header2-page-3 {
+    margin: 0 auto;
     text-align: center;
-    padding: 40px;
+    padding: 10px 10px 10px 10px;
+}
+   .light-dark-images {
+     text-align: center;
+     margin: 0 auto;
+     padding: 50px 5px 5px 5px;
+   }
+  .light-side-image, .dark-side-image {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    margin: 20px;
+    display: inline;
     
-    
-  }
+    }
 
   
   .column {
@@ -70,32 +103,132 @@
     padding: 20px;
     margin: 20px;
 
-}
+  }
 
 
   .buttons {
     text-align: center;
     padding: 20px;
-    }
+  }
 
   .left-button, .right-button {
-       display: inline-block;
-       padding: 20px;
-       margin: 20px;
+    display: inline-block;
+    padding: 20px;
+    
+    margin: 20px;
        
+  }
 
+  /* TEXT BOX CARD SECTION BELOW */
+
+  
+
+  
+  .cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+    display: inline-block;
+  }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+  }
+  
+  .light-side-image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  
+  .title-white {
+    color: white;
+  }
+  
+  .title-black {
+    color: black;
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  
+  
+  
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    /* background-image: url('https://i.redd.it/b3esnz5ra34y.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
+    padding: -20px;
+  }
+ .light-side-card {
+  background-image: url('./light-side.png');
+ }
+
+  .light-text  {
+    color: white;
+    font-family: monaco
+    
+  }
+  
+  .dark-text  {
+    color: red;
+    font-family: monaco;
+    
+    
   }
   
 
   /* Mobile Responsiveness below */
   
-  @media screen and (max-width: 600px) {
-    .star-title {
-      font-size: 50px;
+    @media screen and (max-width: 600px) {
+    .page-welcome {
+      font-size: 12px;
     }
   }
-  @media screen and (max-width: 600px) {
-    .galactic {
-      font-size: 30px;
-    }
-  }
+
+  
+ 
+ 
