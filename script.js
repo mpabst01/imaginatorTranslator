@@ -77,31 +77,101 @@ var quizLightQuestions = [
           // https://swapi.dev/api/transport/10/
     }
 ];
+var quizDarkQuestions = [
+    {
+      question: "Where does Wilhuff Tarkin call home?",
+      choiceA: "Bespin",
+      choiceB: "Eriadu",
+      choiceC: "Coruscant",
+      choiceD: "Mustafar",
+      correctAnswer: "b",
+      // https://swapi.dev/api/planets/21/
+    },
+    {
+      question: "When was Darth Vader born?",
+      choiceA: "41.9BBY",
+      choiceB: "64BBY",
+      choiceC: "200BBY",
+      choiceD: "54BBY",
+      correctAnswer: "a",
+      // https://swapi.dev/api/people/10/
+    },
+    {
+      question: "What planet does Anakin Skywalker seek duel with Obi-Wan Kenobi?",
+      choiceA: "unknown",
+      choiceB: "Mustafar",
+      choiceC: "The Death Star",
+      choiceD: "Polis Massa",
+      correctAnswer: "b",
+      // https://swapi.dev/api/planets/13/
+    },
+    {
+      question: "What color are Darth Maul's eyes?",
+      choiceA: "black",
+      choiceB: "brown",
+      choiceC: "yellow",
+      choiceD: "blue",
+      correctAnswer: "c",
+      // https://swapi.dev/api/people/44/
+    },
+    {
+      question: "When was General Grievous born?",
+      choiceA: "200BBY",
+      choiceB: "82BBY",
+      choiceC: "41BBY",
+      choiceD: "unknown",
+      correctAnswer: "d",
+      // https://swapi.dev/api/people/79/
+    },
+    {
+      question: "How tall is Palpatine?",
+      choiceA: "160",
+      choiceB: "150",
+      choiceC: "170",
+      choiceD: "180",
+      correctAnswer: "c",
+      // https://swapi.dev/api/species/21/
+    },
+    {
+      question: "How long is the Death Star?",
+      choiceA: "300",
+      choiceB: "19,000",
+      choiceC: "1,600",
+      choiceD: "120,000",
+      correctAnswer: "d",
+      // https://swapi.dev/api/transport/9/
+    },
+];
 
-function retrieveAns(){
+function startQuiz() {
+    // hide start screen
+    var startScreenEl = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
+  
+    // un-hide questions section
+    questionsEl.removeAttribute("class");
     
+    getQuestion();
+  }
 
-// This function checks the response to each answer
-function checkAnswer(answer) {
-    correct = quizQuestions[currentQuestionIndex].correctAnswer;
-    if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
-      score++;
-      console.log("That is Correct!");
-      currentQuestionIndex++;
-      generateQuizQuestion();
-      //display in the results div that the answer is correct.
-    } else if (
-      answer !== correct &&
-      currentQuestionIndex !== finalQuestionIndex
-    ) {
-      console.log("That is not correct.");
-      currentQuestionIndex++;
-      generateQuizQuestion();
-      //display in the results div that the answer is wrong.
-    } else {
-      showScore();
-    }
-}
+  //add event listener
+startQuizButton.addEventListener('click', function(event) {
+    window.location.href='Students.html';
+});
+buttonA.addEventListener('click', function(event) {
+    window.location.href='Students.html';
+});
+buttonB.addEventListener('click', function(event) {
+    window.location.href='Students.html';
+});
+buttonC.addEventListener('click', function(event) {
+    window.location.href='Students.html';
+});
+buttonD.addEventListener('click', function(event) {
+    window.location.href='Students.html';
+});
+
+  
 
 // This button starts the quiz!
 startQuizButton.addEventListener("click", startQuiz);
