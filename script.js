@@ -1,4 +1,8 @@
 // Quiz question object
+
+
+
+
 var questionsEl = document.getElementById("questions");
 var startQuizDiv = document.getElementById("startpage");
 var startQuizButton = document.getElementById("startbtn");
