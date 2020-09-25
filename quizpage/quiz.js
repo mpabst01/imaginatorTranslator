@@ -95,8 +95,6 @@ function retrieveAns(){
                   // https://swapi.dev/api/transport/10/
                 },
                 ];
-            
-
             // add people to all people
             // if there is a next, do another request
             if (!data.next) {
