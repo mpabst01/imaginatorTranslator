@@ -1,102 +1,93 @@
 /* BACKGROUND IMAGE FOR MAIN PAGE */
-   .bg-image {
-      
-    background-image: url(1200px-Hyades.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-    }
-/* BACKGROUND IMAGE FOR LIGHT SIDE PAGE */
-   .bg-image1 {
-      
-    background-image: url(artwork_circumbinary_planet.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-      }
-  
- /* BACKGROUND IMAGE FOR DARK SIDE PAGE */      
-    .bg-image2 {
-      
-     background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/03/7-1.png);
-     background-position: center center;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
-     background-color: #464646;
-           }   
-           
-  /* BACKGROUND IMAGE FOR GAME OVER SCREEN */         
-    .bg-image3 {
-      
-     background-image: url(game-over-image.jpg);
-     background-position: center center;
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-size: cover;
-     background-color: #464646;
-                  } 
-  
-      
-/* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
-   .page-welcome {
-     text-align: center;
-     font-family: arial;
-     color: white;
-     font-size: 15px;
-     background-color: rgb(0, 0, 0);
-     opacity: 0.7;
-     
-        
-    }
-
-  /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
-   .header-main1, .header-main2 {
-      margin: 0 auto;
-      text-align: center;
-        
-   }
-
-   .header1-page-2, .header1-page-3 {
-      margin: 0 auto;
-      text-align: center;
-      padding: 30px 10px 10px 10px;
-   }
-
-   .header2-page-2 {
-     margin: 0 auto;
-     text-align: center;
-     padding: 10px 10px 10px 10px; 
-   }
-   
-
-  .header2-page-3 {
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
+.bg-image {
+  background-image: url(1200px-Hyades.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 }
- 
+/* BACKGROUND IMAGE FOR LIGHT SIDE PAGE */
+.bg-image1 {
+  background-image: url(artwork_circumbinary_planet.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+/* BACKGROUND IMAGE FOR DARK SIDE PAGE */
+.bg-image2 {
+  background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/03/7-1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+/* BACKGROUND IMAGE FOR GAME OVER SCREEN */
+.bg-image3 {
+  background-image: url(game-over-image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+/* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
+.page-welcome {
+  text-align: center;
+  font-family: arial;
+  color: white;
+  font-size: 15px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+/* Centers the STAR WARS and THE GALACTIC GAME headers on page */
+.header-main1,
+.header-main2 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header1-page-2,
+.header1-page-3 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 10px 10px 10px;
+}
+
+.header2-page-2 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
+.header2-page-3 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+}
+
 /* BUTTON STYLING MAIN PAGE */
-  .light-side-image, .dark-side-image {
-    
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    margin: 20px;
-    display: inline-block;
-       
-    }
+.light-side-image,
+.dark-side-image {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+}
 
-    .buttons {
-     text-align: center;
-     
-    }
+.buttons {
+  text-align: center;
+}
 
-    /* The Modal (background) */
+/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -106,8 +97,8 @@
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -133,60 +124,64 @@
   text-decoration: none;
   cursor: pointer;
 }
+.question-container {
+  text-align: center;
+}
 
-    
+.next-question {
+  width: 100%;
+}
 
- 
-  
-  @media all and (max-width: 500px) {
-    .card-list {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
-  }
-  
-  
-  
-  .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    /* background-image: url('https://i.redd.it/b3esnz5ra34y.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    transition: 0.4s;
-    padding: -20px;
-  }
- .light-side-card {
-  background-image: url('./light-side.png');
- }
+/* LIGHT-SIDE PAGE BUTTON STYLING */
+.choice-a,
+.choice-b,
+.choice-c,
+.choice-d {
+  width: 225px;
+  display: inline;
+  text-align: center;
+}
 
-  .light-text  {
-    color: white;
-    font-family: monaco
-    
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
   }
-  
-  .dark-text  {
-    color: red;
-    font-family: monaco;
-    
-    
-  }
-  
+}
 
-  /* Mobile Responsiveness below */
-  
-    @media screen and (max-width: 600px) {
-    .page-welcome {
-      font-size: 12px;
-    }
-  }
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  /* background-image: url('https://i.redd.it/b3esnz5ra34y.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  transition: 0.4s;
+  padding: -20px;
+}
+.light-side-card {
+  background-image: url("./light-side.png");
+}
 
-  
- 
- 
+.light-text {
+  color: white;
+  font-family: monaco;
+}
+
+.dark-text {
+  color: red;
+  font-family: monaco;
+}
+
+/* Mobile Responsiveness below */
+
+@media screen and (max-width: 600px) {
+  .page-welcome {
+    font-size: 12px;
+  }
+}
