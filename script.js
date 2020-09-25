@@ -16,7 +16,7 @@ var quizLightQuestions = [
         choiceB: "Alderaan",
         choiceC: "Bespin",
         choiceD: "Naboo",
-        correctAnswer: "b",
+        correctAnswer: "a",
         // https://swapi.dev/api/planets/1/
     },
     {
@@ -24,7 +24,7 @@ var quizLightQuestions = [
         choiceA: "57BBY",
         choiceB: "52BBY",
         choiceC: "102BBY",
-        choiceD: "Dunedin",
+        choiceD: "204BBY",
         correctAnswer: "a",
         // https://swapi.dev/api/people/10/
     },
