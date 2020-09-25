@@ -8,8 +8,6 @@ var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 var correctAnswer = [];
 var queryUrl = "https://swapi.dev/api/";
-var correctAnswer = [];
-var queryUrl = "https://swapi.dev/api/";
     //var thingUrls = ["people/", "films/", "starships/", "transport", "species/", "planets/"];
 var quizLightQuestions = [
     {
@@ -20,9 +18,8 @@ var quizLightQuestions = [
         choiceD: "Naboo",
         correctAnswer: "b",
         // https://swapi.dev/api/planets/1/
-        },
-        {
-            //q1
+    },
+    {
         question: "When was Obi-Wan Kenobi born?",
         choiceA: "57BBY",
         choiceB: "52BBY",
@@ -30,9 +27,8 @@ var quizLightQuestions = [
         choiceD: "Dunedin",
         correctAnswer: "a",
         // https://swapi.dev/api/people/10/
-        },
-        {
-        //q2
+    },
+    {
         question: "What planet does Yoda seek refuge from the Dark Side?",
         choiceA: "unknown",
         choiceB: "Dagobah",
@@ -40,9 +36,8 @@ var quizLightQuestions = [
         choiceD: "Kamino",
         correctAnswer: "b",
         // https://swapi.dev/api/planets/5/
-        },
-        {
-            //q3
+    },
+    {
         question: "What color are Lando Calrissian's eyes?",
         choiceA: "black",
         choiceB: "hazel",
@@ -50,8 +45,8 @@ var quizLightQuestions = [
         choiceD: "blue",
         correctAnswer: "c",
         // https://swapi.dev/api/people/25/
-        },
-        {
+    },
+    {
             //q4
         question: "Who is Bail Prestor Organa?",
         choiceA: "Luke's stepfather",
@@ -60,8 +55,8 @@ var quizLightQuestions = [
         choiceD: "Leia's stepfather",
         correctAnswer: "d",
           // https://swapi.dev/api/people/68/
-        },
-        {
+    },
+    {
             //q5
         question: "What language does Chewbacca speak?",
         choiceA: "Toydarian",
@@ -70,8 +65,8 @@ var quizLightQuestions = [
         choiceD: "Huttese",
           correctAnswer: "c",
           // https://swapi.dev/api/species/3/
-        },
-        {
+    },
+    {
             //q6
           question: "Who piloted the Millenium Falcon?",
           choiceA: "Rey",
@@ -80,8 +75,8 @@ var quizLightQuestions = [
           choiceD: "All of the above",
           correctAnswer: "d",
           // https://swapi.dev/api/transport/10/
-        },
-        ];
+    }
+];
 
 function retrieveAns(){
     
