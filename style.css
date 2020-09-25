@@ -99,7 +99,20 @@
      
     }
 
-    
+    .question-container {
+      text-align: center;
+    }
+
+    .next-question {
+      width: 100%;
+    }
+
+    /* LIGHT-SIDE PAGE BUTTON STYLING */
+    .choice-a, .choice-b, .choice-c, .choice-d {
+      width: 225px;
+      display: inline;
+      text-align: center;
+    }
 
     
 
