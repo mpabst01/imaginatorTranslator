@@ -1,7 +1,7 @@
 /* BACKGROUND IMAGE FOR MAIN PAGE */
-  .bg-image {
+   .bg-image {
       
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Hyades.jpg/1024px-Hyades.jpg);
+    background-image: url(1200px-Hyades.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,7 +9,7 @@
     background-color: #464646;
     }
 /* BACKGROUND IMAGE FOR LIGHT SIDE PAGE */
-  .bg-image1 {
+   .bg-image1 {
       
     background-image: url(artwork_circumbinary_planet.jpg);
     background-position: center center;
@@ -20,7 +20,7 @@
       }
   
  /* BACKGROUND IMAGE FOR DARK SIDE PAGE */      
-   .bg-image2 {
+    .bg-image2 {
       
      background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/03/7-1.png);
      background-position: center center;
@@ -31,15 +31,14 @@
            }   
            
   /* BACKGROUND IMAGE FOR GAME OVER SCREEN */         
-           
-  .bg-image3 {
+    .bg-image3 {
       
-      background-image: url(https://wallpaperaccess.com/full/2137903.jpg);
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-color: #464646;
+     background-image: url(game-over-image.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     background-color: #464646;
                   } 
 
            
@@ -56,9 +55,7 @@
         
     }
 
-
-
-    /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
+  /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
    .header-main1, .header-main2 {
       margin: 0 auto;
       text-align: center;
@@ -83,102 +80,30 @@
     text-align: center;
     padding: 10px 10px 10px 10px;
 }
-   .light-dark-images {
-     text-align: center;
-     margin: 0 auto;
-     padding: 50px 5px 5px 5px;
-   }
+ 
+
+  /* BUTTON STYLING MAIN PAGE */
   .light-side-image, .dark-side-image {
+    
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     margin: 20px;
-    display: inline;
+    display: inline-block;
+   
     
     }
 
-  
-  .column {
-    display: inline-block;
-    padding: 20px;
-    margin: 20px;
+    .buttons {
+     text-align: center;
+     
+    }
 
-  }
-
-
-  .buttons {
-    text-align: center;
-    padding: 20px;
-  }
-
-  .left-button, .right-button {
-    display: inline-block;
-    padding: 20px;
     
-    margin: 20px;
-       
-  }
 
-  /* TEXT BOX CARD SECTION BELOW */
+    
 
-  
-
-  
-  .cards-list {
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    cursor: pointer;
-    transition: 0.4s;
-    display: inline-block;
-  }
-  
-  .card .card_image {
-    width: inherit;
-    height: inherit;
-    border-radius: 40px;
-  }
-  
-  .light-side-image {
-    width: inherit;
-    height: inherit;
-    border-radius: 40px;
-    object-fit: cover;
-  }
-  
-  .card .card_title {
-    text-align: center;
-    border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: -80px;
-    height: 40px;
-  }
-  
-  .card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-      -5px -5px 30px 15px rgba(0,0,0,0.22);
-  }
-  
-  .title-white {
-    color: white;
-  }
-  
-  .title-black {
-    color: black;
-  }
+ 
   
   @media all and (max-width: 500px) {
     .card-list {
