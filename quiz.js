@@ -25,24 +25,25 @@ function showQuestion(){
     //adds questions to html
     var q = questions[currentQuestionIndex];
     questionContainerDiv.append("<h1>Question:</h1>");
-    questionContainerDiv.append("<h5 class='w3-padding-32'>questions" + q.question + "</h5>");
+    questionContainerDiv.append("<h5 class='w3-padding-32'>" + q.question + "</h5>");
     
     //adds question's answers as buttons to html page
-    var btn = $("<button>").addClass("w3-button w3-black w3-padding-large w3-large w3-margin-top choice-a").text(q.choiceA);
-    questionContainerDiv.append(btn);
-    btn = $("<button>").addClass("w3-button w3-black w3-padding-large w3-large w3-margin-top choice-b").text(q.choiceB);
-    questionContainerDiv.append(btn);
-    btn = $("<button>").addClass("w3-button w3-black w3-padding-large w3-large w3-margin-top choice-c").text(q.choiceC);
-    questionContainerDiv.append(btn);
-    btn = $("<button>").addClass("w3-button w3-black w3-padding-large w3-large w3-margin-top choice-d").text(q.choiceD);
-    questionContainerDiv.append(btn);
-    
+    questionContainerDiv.append(renderButton(q.choiceA, "choice-a"));
+    questionContainerDiv.append(renderButton(q.choiceB, "choice-b"));
+    questionContainerDiv.append(renderButton(q.choiceC, "choice-c"));
+    questionContainerDiv.append(renderButton(q.choiceD, "choice-d"));
 
+    function renderButton(choice, choiceClass){
+        var btnClass = "w3-button w3-black w3-padding-large w3-large w3-margin-top";
+        return $("<button>").addClass(btnClass + " " + choiceClass).text(choice);
+    }
 }
 
 // render the first question
 showQuestion();
+
 // when user clicks on an answer
+
 // check if the answer is correct
 // update the score
 // alert trivia url
