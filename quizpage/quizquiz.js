@@ -1,3 +1,4 @@
+v// Quiz question object
 var questionsEl = document.getElementById("questions");
 var startQuizDiv = document.getElementById("startpage");
 var startQuizButton = document.getElementById("startbtn");
@@ -9,106 +10,127 @@ var buttonD = document.getElementById("d");
 function retrieveAns(){
     var correctAnswer = [];
     var queryUrl = "https://swapi.dev/api/";
+    var thingUrls = ["people/", "films/", "starships/", "transport", "species/", "planets/"];
+    var quizLightQuestions = [
+        {
+            //q0
+          question: "What planet does C-3PO call home?",
+          choiceA: "Tattooine",
+          choiceB: "Alderaan",
+          choiceC: "Bespin",
+          choiceD: "Naboo",
+          correctAnswer: "b",
+          // https://swapi.dev/api/planets/1/
+        },
+        {
+            //q1
+          question: "When was Obi-Wan Kenobi born?",
+          choiceA: "57BBY",
+          choiceB: "52BBY",
+          choiceC: "102BBY",
+          choiceD: "Dunedin",
+          correctAnswer: "a",
+          // https://swapi.dev/api/people/10/
+        },
+        {
+            //q2
+          question: "What planet does Yoda seek refuge from the Dark Side?",
+          choiceA: "unknown",
+          choiceB: "Dagobah",
+          choiceC: "Yavin IV",
+          choiceD: "Kamino",
+          correctAnswer: "b",
+          // https://swapi.dev/api/planets/5/
+        },
+        {
+            //q3
+          question: "What color are Lando Calrissian's eyes?",
+          choiceA: "black",
+          choiceB: "hazel",
+          choiceC: "brown",
+          choiceD: "blue",
+          correctAnswer: "c",
+            // https://swapi.dev/api/people/25/
+        },
+        {
+            //q4
+          question: "Who is Bail Prestor Organa?",
+          choiceA: "Luke's stepfather",
+          choiceB: "Han Solo's father",
+          choiceC: "A rebel fighter", 
+          choiceD: "Leia's stepfather",
+          correctAnswer: "d",
+          // https://swapi.dev/api/people/68/
+        },
+        {
+            //q5
+          question: "What language does Chewbacca speak?",
+          choiceA: "Toydarian",
+          choiceB: "Neimodian",
+          choiceC: "Shyriiwook",
+          choiceD: "Huttese",
+          correctAnswer: "c",
+          // https://swapi.dev/api/species/3/
+        },
+        {
+            //q6
+          question: "Who piloted the Millenium Falcon?",
+          choiceA: "Rey",
+          choiceB: "Lando Calrissian",
+          choiceC: "Han Solo",
+          choiceD: "All of the above",
+          correctAnswer: "d",
+          // https://swapi.dev/api/transport/10/
+        },
+        ];
+            function answerCorrect(queryUrl){
+                var correctAnswer = correctAnswer.length;
+                var thingsUrl = thingsURL.length;
+                var i;
+                for (i in correctAnswer[0, 2]){
+                    $.ajax({
+                        method: "GET",
+                        url: queryUrl + thingsUrl[5],
+                        data: data});
+                    }
 
-    function answerCorrect(queryUrl){
-        $.ajax({
-            method: "GET",
-            url: queryUrl,
-        }).done(function (data) {
-
-            var people = [];
-            var films = [];
-            var starships = [];
-            var transport = [];
-            var species = [];
-            var planets = [];
-            var correctAnswer = {people: "$("#results").val(JSON.stringify(people, null, 2))", films: $("#results").val(JSON.stringify(films, null, 2)), starships: $("#results").val(JSON.stringify(starships, null, 2)), transport: $("#results").val(JSON.stringify(transport, null, 2)), species: $("#results").val(JSON.stringify(species, null, 2)), planets: $("#results").val(JSON.stringify(planets, null, 2))};
-            var quizLightQuestions = [
-                {
-                    //q0
-                  question: "What planet does C-3PO call home?",
-                  choiceA: "Tattooine",
-                  choiceB: "Alderaan",
-                  choiceC: "Bespin",
-                  choiceD: "Naboo",
-                  correctAnswer["planets"] "b",
-                  // https://swapi.dev/api/planets/1/
-                },
-                {
-                    //q1
-                  question: "When was Obi-Wan Kenobi born?",
-                  choiceA: "57BBY",
-                  choiceB: "52BBY",
-                  choiceC: "102BBY",
-                  choiceD: "Dunedin",
-                  correctAnswer[]: "a",
-                  // https://swapi.dev/api/people/10/
-                },
-                {
-                    //q2
-                  question: "What planet does Yoda seek refuge from the Dark Side?",
-                  choiceA: "unknown",
-                  choiceB: "Dagobah",
-                  choiceC: "Yavin IV",
-                  choiceD: "Kamino",
-                  correctAnswer: "b",
-                  // https://swapi.dev/api/planets/5/
-                },
-                {
-                    //q3
-                  question: "What color are Lando Calrissian's eyes?",
-                  choiceA: "black",
-                  choiceB: "hazel",
-                  choiceC: "brown",
-                  choiceD: "blue",
-                  correctAnswer: "c",
-                    // https://swapi.dev/api/people/25/
-                },
-                {
-                    //q4
-                  question: "Who is Bail Prestor Organa?",
-                  choiceA: "Luke's stepfather",
-                  choiceB: "Han Solo's father",
-                  choiceC: "A rebel fighter", 
-                  choiceD: "Leia's stepfather",
-                  correctAnswer: "d",
-                  // https://swapi.dev/api/people/68/
-                },
-                {
-                    //q5
-                  question: "What language does Chewbacca speak?",
-                  choiceA: "Toydarian",
-                  choiceB: "Neimodian",
-                  choiceC: "Shyriiwook",
-                  choiceD: "Huttese",
-                  correctAnswer: "c",
-                  // https://swapi.dev/api/species/3/
-                },
-                {
-                    //q6
-                  question: "Who piloted the Millenium Falcon?",
-                  choiceA: "Rey",
-                  choiceB: "Lando Calrissian",
-                  choiceC: "Han Solo",
-                  choiceD: "All of the above",
-                  correctAnswer: "d",
-                  // https://swapi.dev/api/transport/10/
-                },
-                ];
+                for (i in correctAnswer[1, 2, 4]){
+                    $.ajax({
+                        method: "GET",
+                        url: queryUrl + thingsUrl[0],
+                        data: data})
+                }
+                for (i in correctAnswer[5]){
+                    $.ajax({
+                        method: "GET",
+                        url: queryUrl + thingsUrl[4],
+                        data: data})
+                }
+                for (i in correctAnswer[6]){
+                    $.ajax({
+                        method: "GET",
+                        url: queryUrl + thingsUrl[3],
+                        data: data }
             
-
-            // add people to all people
-            // if there is a next, do another request
-            if (!data.next) {
-            // display all people in the text area
-            console.log(correctAnswer);
-            $("#results").val(JSON.stringify(correctAnswer, null, 2));
-            return;
-            }
-            answerCorrect(data.next);
-        });
-
-    }
+            }).done(function (data) {
+                if (!data.next) {
+                }
+            // display correct answer in the text area
+                console.log(correctAnswer);
+                $("#results").val(JSON.stringify(correctAnswer, null, 2));
+                return;
+                },
+                answerCorrect(data.next)
+            };
+            //var people = [];
+            //var films = [];
+            //var starships = [];
+            //var transport = [];
+            //var species = [];
+            //var planets = [];
+           //var correctAnswer = {people: (JSON.stringify(people, null, 2))", films: $("#results").val(JSON.stringify(films, null, 2)), starships: $("#results").val(JSON.stringify(starships, null, 2)), transport: $("#results").val(JSON.stringify(transport, null, 2)), species: $("#results").val(JSON.stringify(species, null, 2)), planets: $("#results").val(JSON.stringify(planets, null, 2))};
+            
+           
 
     $("#send").on("click", function () {
         answerCorrect(queryUrl);
