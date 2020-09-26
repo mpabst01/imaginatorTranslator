@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StarWars Giphy Index</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body id="wholeThing">
+
+<div class="container" id="header">
+  <!-- <img id="topImageL" src="https://github.com/rissawyss/GiphyAPI/blob/master/assets/images/giphy-left.gif">
+  <img id="topImageR" src="https://github.com/rissawyss/GiphyAPI/blob/master/assets/images/giphy-right.gif"> -->
+<h4>Click the buttons to display GIPHYs of your favorite StarWars Character<br>Click the GIPHYs to pause and play<br>Search to add more buttons!</h4>
+</div>
+
+<form class="form-inline" id="starwarsSearch">
+  <div class="form-group">
+    <label for="starwarsInput">Search for a StarWars Character</label>
+    <input type="text" id="starwarsInput">
+  </div>
+  <!-- Button triggers show to be added -->
+  <input id="addCharacter" type="submit" value="submit">
+</form>
+
+<div class="row">
+  <div class="container">
+    <div class="btn-group inline pull-left">
+      <button class="btn btn-primary" id="character" data-search="Darth Vader">Darth Vader</button>
+      <button class="btn btn-primary" id="character" data-search="Luke Skywalker">Luke Skywalker</button>
+      <button class="btn btn-primary" id="character" data-search="Leia Organa">Leia Organa</button>
+      <button class="btn btn-primary" id="character" data-search="Yoda">Yoda</button>
+      <button class="btn btn-primary" id="character" data-search="Han Solo">Han Solo</button>
+      <button class="btn btn-primary" id="character" data-search="Chewbacca">Chewbacca</button>
+      <button class="btn btn-primary" id="character" data-search="R2-D2">R2-D2</button>
+
+      <div id="myButtons"></div>
+    </div> <!--end of button group -->
+  </div> <!--end of container -->
+</div> <!--end of row -->
+
+
+<div class="row">
+  <div class="container">
+      <span><div id="gifArea"></div></span>
+  </div> <!--end of container -->
+</div> <!-- end of row  -->
+
+
+<script type="text/javascript" src="giphy-api.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>
