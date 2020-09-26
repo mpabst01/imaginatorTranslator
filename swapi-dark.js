@@ -1,6 +1,6 @@
 $(document).ready(function (event) {
     // swapi trivia for people
-    function fetchPeopleTriviaFromSwapi(triviaURL) {
+    function fetchTriviaFromSwapi(triviaURL) {
       // ajax request with the trivia url
       $.ajax({
         url: triviaURL,
@@ -71,7 +71,7 @@ $(document).ready(function (event) {
         };
       });
     }
-    fetchPeopleTriviaFromSwapi("");
+    fetchTriviaFromSwapi("https://swapi.dev/api/people/21/");
   
     // localStorage.setItem(subject, subject);
     // $(".prev-list").prepend(
@@ -85,79 +85,79 @@ $(document).ready(function (event) {
       });
     }
   
-// Swapi trivia for planets
-      function fetchPlanetsTriviaFromSwapi(triviaURL) {
-      // ajax request with the trivia url
-      $.ajax({
-        url: triviaURL,
-        method: "GET",
-      }).then(function (fields) {
-        console.log(fields);
-        localStorage.setItem("swapi", JSON.stringify(fields));
-        console.log(fields.name);
-        $("#modal-content").empty();
+// // Swapi trivia for planets
+//       function fetchPlanetsTriviaFromSwapi(triviaURL) {
+//       // ajax request with the trivia url
+//       $.ajax({
+//         url: triviaURL,
+//         method: "GET",
+//       }).then(function (fields) {
+//         console.log(fields);
+//         localStorage.setItem("swapi", JSON.stringify(fields));
+//         console.log(fields.name);
+//         $("#modal-content").empty();
   
-        // show the trivia info on the page
-        // Get the modal
-        var modal = document.getElementById("myModal");
+//         // show the trivia info on the page
+//         // Get the modal
+//         var modal = document.getElementById("myModal");
   
-        // not sure we need the button
-        var btn = document.getElementById("myBtn");
-        btn.onclick = function () {
-          modal.style.display = "block";
-        };
+//         // not sure we need the button
+//         var btn = document.getElementById("myBtn");
+//         btn.onclick = function () {
+//           modal.style.display = "block";
+//         };
   
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-          modal.style.display = "none";
-        };
+//         var span = document.getElementsByClassName("close")[0];
+//         span.onclick = function () {
+//           modal.style.display = "none";
+//         };
   
-        window.onclick = function (event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-          var modalHeader = $("<h2>")
-            .addClass("modal-header")
-            .text("The answer is...");
-          console.log(modalHeader);
+//         window.onclick = function (event) {
+//           if (event.target == modal) {
+//             modal.style.display = "none";
+//           }
+//           var modalHeader = $("<h2>")
+//             .addClass("modal-header")
+//             .text("The answer is...");
+//           console.log(modalHeader);
   
-          var name = $("<h3>")
-            .addClass("modal-body")
-            .text("Name: " + fields.name);
-          console.log(name);
+//           var name = $("<h3>")
+//             .addClass("modal-body")
+//             .text("Name: " + fields.name);
+//           console.log(name);
   
-          var height = $("<h4>")
-            .addClass("modal-body")
-            .text("Climate: " + fields.climate);
-          console.log(climate);
+//           var height = $("<h4>")
+//             .addClass("modal-body")
+//             .text("Climate: " + fields.climate);
+//           console.log(climate);
   
-          var eyeColor = $("<h4>")
-            .addClass("modal-body")
-            .text("Terrain: " + fields.terrain);
-          console.log(terrain);
+//           var eyeColor = $("<h4>")
+//             .addClass("modal-body")
+//             .text("Terrain: " + fields.terrain);
+//           console.log(terrain);
   
-          var homeWorld = $("<h4>")
-            .addClass("modal-body")
-            .text("Surface Water: " + fields.surface_water + " m");
-          console.log(surface_water);
+//           var homeWorld = $("<h4>")
+//             .addClass("modal-body")
+//             .text("Surface Water: " + fields.surface_water + " m");
+//           console.log(surface_water);
   
-          var birthYear = $("<h4>")
-            .addClass("modal-body")
-            .text("Population: " + fields.population);
-          console.log(population);
+//           var birthYear = $("<h4>")
+//             .addClass("modal-body")
+//             .text("Population: " + fields.population);
+//           console.log(population);
   
-          $(".modal").append(
-            modalHeader,
-            name,
-            climate,
-            terrain,
-            surface_water,
-            population
-          );
-        };
-      });
-    }
-    fetchPlanetsTriviaFromSwapi("https://swapi.dev/api/planets/21/");
+//           $(".modal").append(
+//             modalHeader,
+//             name,
+//             climate,
+//             terrain,
+//             surface_water,
+//             population
+//           );
+//         };
+//       });
+//     }
+//     fetchPlanetsTriviaFromSwapi("https://swapi.dev/api/planets/21/");
   
     // localStorage.setItem(subject, subject);
     // $(".prev-list").prepend(
