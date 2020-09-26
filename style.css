@@ -38,7 +38,6 @@
 }
 
 /* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
-<<<<<<< HEAD
    .page-welcome {
      text-align: center;
      font-family: arial;
@@ -156,7 +155,6 @@
     .page-welcome {
       font-size: 12px;
     }
-=======
 .page-welcome {
   text-align: center;
   font-family: arial;
@@ -207,44 +205,29 @@
 }
 
 /* The Modal (background) */
-.hide {
-  display: none;
-}
 .modal {
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
+ background-color: #000;
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color:rgb(0,0,0);
   float: right;
-  font-size: 28px;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal-body {padding: 2px 16px;}
+
+
 .question-container {
   text-align: center;
 }
@@ -267,7 +250,6 @@
   .card-list {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
->>>>>>> 74bc637759131de42f0c797dd73f84d548c79c7c
   }
 }
 
