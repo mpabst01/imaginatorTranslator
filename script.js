@@ -8,6 +8,7 @@ var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 var correctAnswer = [];
 var queryUrl = "https://swapi.dev/api/";
+var currentQuestionIndex = 0
 //var thingUrls = ["people/", "films/", "starships/", "transport", "species/", "planets/"];
 var quizLightQuestions = [
   {
@@ -17,7 +18,7 @@ var quizLightQuestions = [
     choiceC: "Bespin",
     choiceD: "Naboo",
     correctAnswer: "a",
-    // https://swapi.dev/api/planets/1/
+  triviaURL: "https://swapi.dev/api/planets/1/"
   },
   {
     question: "When was Obi-Wan Kenobi born?",
@@ -26,7 +27,7 @@ var quizLightQuestions = [
     choiceC: "102BBY",
     choiceD: "204BBY",
     correctAnswer: "a",
-    // https://swapi.dev/api/people/10/
+   triviaURL: "https://swapi.dev/api/people/10/"
   },
   {
     question: "What planet does Yoda seek refuge from the Dark Side?",
@@ -35,7 +36,7 @@ var quizLightQuestions = [
     choiceC: "Yavin IV",
     choiceD: "Kamino",
     correctAnswer: "b",
-    // https://swapi.dev/api/planets/5/
+  triviaURL: "https://swapi.dev/api/planets/5/"
   },
   {
     question: "What color are Lando Calrissian's eyes?",
@@ -44,7 +45,7 @@ var quizLightQuestions = [
     choiceC: "brown",
     choiceD: "blue",
     correctAnswer: "c",
-    // https://swapi.dev/api/people/25/
+  triviaURL: "https://swapi.dev/api/people/25/"
   },
   {
     //q4
@@ -54,7 +55,7 @@ var quizLightQuestions = [
     choiceC: "A rebel fighter",
     choiceD: "Leia's stepfather",
     correctAnswer: "d",
-    // https://swapi.dev/api/people/68/
+  triviaURL: "https://swapi.dev/api/people/68/"
   },
   {
     //q5
@@ -64,7 +65,7 @@ var quizLightQuestions = [
     choiceC: "Shyriiwook",
     choiceD: "Huttese",
     correctAnswer: "c",
-    // https://swapi.dev/api/species/3/
+  triviaURL: "https://swapi.dev/api/species/3/"
   },
   {
     //q6
@@ -74,18 +75,18 @@ var quizLightQuestions = [
     choiceC: "Han Solo",
     choiceD: "All of the above",
     correctAnswer: "d",
-    // https://swapi.dev/api/transport/10/
+    triviaURL:  "https://swapi.dev/api/transport/10/"
   },
 ];
 var quizDarkQuestions = [
   {
     question: "Where does Wilhuff Tarkin call home?",
-    choiceA: "Bespin",
-    choiceB: "Eriadu",
+    choiceA: "Eriadu",
+    choiceB: "Bespin",
     choiceC: "Coruscant",
     choiceD: "Mustafar",
-    correctAnswer: "b",
-    // https://swapi.dev/api/planets/21/
+    correctAnswer: "a",
+    triviaURL: "https://swapi.dev/api/planets/21/"
   },
   {
     question: "When was Darth Vader born?",
@@ -94,7 +95,7 @@ var quizDarkQuestions = [
     choiceC: "200BBY",
     choiceD: "54BBY",
     correctAnswer: "a",
-    // https://swapi.dev/api/people/10/
+    triviaURL: "https://swapi.dev/api/people/10/"
   },
   {
     question:
@@ -104,7 +105,7 @@ var quizDarkQuestions = [
     choiceC: "The Death Star",
     choiceD: "Polis Massa",
     correctAnswer: "b",
-    // https://swapi.dev/api/planets/13/
+    triviaURL: "https://swapi.dev/api/planets/13/"
   },
   {
     question: "What color are Darth Maul's eyes?",
@@ -113,7 +114,7 @@ var quizDarkQuestions = [
     choiceC: "yellow",
     choiceD: "blue",
     correctAnswer: "c",
-    // https://swapi.dev/api/people/44/
+    triviaURL:"https://swapi.dev/api/people/44/"
   },
   {
     question: "When was General Grievous born?",
@@ -122,7 +123,7 @@ var quizDarkQuestions = [
     choiceC: "41BBY",
     choiceD: "unknown",
     correctAnswer: "d",
-    // https://swapi.dev/api/people/79/
+    triviaURL: "https://swapi.dev/api/people/79/"
   },
   {
     question: "How tall is Palpatine?",
@@ -131,7 +132,7 @@ var quizDarkQuestions = [
     choiceC: "170",
     choiceD: "180",
     correctAnswer: "c",
-    // https://swapi.dev/api/species/21/
+    triviaURL: "https://swapi.dev/api/species/21/"
   },
   {
     question: "How long is the Death Star?",
@@ -140,7 +141,7 @@ var quizDarkQuestions = [
     choiceC: "1,600",
     choiceD: "120,000",
     correctAnswer: "d",
-    // https://swapi.dev/api/transport/9/
+    triviaURL: "https://swapi.dev/api/transport/9/"
   },
 ];
 
@@ -194,6 +195,10 @@ function startQuiz() {
   getQuestion();
 }
 
+
+function getQuestion() {
+  var currentQuestionIndex
+}
 //add event listener
 startQuizButton.addEventListener("click", function (event) {
   window.location.href = "Students.html";
