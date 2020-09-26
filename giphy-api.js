@@ -9,7 +9,7 @@ $(document).ready(function () {
     console.log(x);
 
     var queryURL =
-      "https://api.giphy.com/v1/gifs/search?q=" +
+      "https://api.giphy.com/v1/gifs/search?q=star+wars" +
       x +
       "&api_key=vJV4l1M7luL2JnbOcT3gzyvyJY2BZut0&limit=10";
 
