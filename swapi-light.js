@@ -68,7 +68,6 @@ $(document).ready(function (event) {
           birthYear
         );
       };
-      // $("modal-content").append(name, height, eyeColor, homeWorld, birthYear);
     });
   }
   fetchTriviaFromSwapi("https://swapi.dev/api/people/25/");
@@ -80,10 +79,8 @@ $(document).ready(function (event) {
   function openModal() {
     console.log("modal click");
 
-    $("#btnModal").click(function () {
+    $("#myBtn").click(function () {
       $("#myModal").modal("show");
     });
-    // var output = `<div class="modal"><h1>Hi<h1></div>`;
-    // $("#myModal").removeClass("hide");
   }
 });
