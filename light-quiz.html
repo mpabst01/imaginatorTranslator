@@ -44,21 +44,25 @@
 
         <button
           class="w3-button w3-black w3-padding-large w3-large w3-margin-top choice-a"
+          onclick="openModal()"
         >
           A
         </button>
         <button
           class="w3-button w3-black w3-padding-large w3-large w3-margin-top choice-b"
+          onclick="openModal()"
         >
           B
         </button>
         <button
           class="w3-button w3-black w3-padding-large w3-large w3-margin-top choice-c"
+          onclick="openModal()"
         >
           C
         </button>
         <button
           class="w3-button w3-black w3-padding-large w3-large w3-margin-top choice-d"
+          onclick="openModal()"
         >
           D
         </button>
@@ -69,10 +73,8 @@
           NEXT QUESTION
         </button>
 
-        <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
         <!-- The Modal -->
-        <div id="myModal" class="modal">
+        <div id="myModal" class="modal hide">
           <!-- Modal content -->
           <div id="trivia" class="modal-content">
             <span class="close">&times;</span>

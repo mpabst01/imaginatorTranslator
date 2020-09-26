@@ -8,6 +8,7 @@ var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 var correctAnswer = [];
 var queryUrl = "https://swapi.dev/api/";
+var currentQuestionIndex = 0
 //var thingUrls = ["people/", "films/", "starships/", "transport", "species/", "planets/"];
 var quizLightQuestions = [
   {
@@ -194,6 +195,10 @@ function startQuiz() {
   getQuestion();
 }
 
+
+function getQuestion() {
+  var currentQuestionIndex
+}
 //add event listener
 startQuizButton.addEventListener("click", function (event) {
   window.location.href = "Students.html";

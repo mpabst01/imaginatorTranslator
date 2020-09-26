@@ -20,32 +20,32 @@ function fetchTriviaFromSwapi(triviaURL) {
       .addClass("modal-text")
       .text("Name: " + fields.name);
     console.log(name);
-    $("body").append(name);
+    $(".modal").append(name);
     var height = $("<h4>")
       .addClass("modal-text")
       .text("Height: " + fields.height + " cm");
     console.log(height);
-    $("body").append(height);
+    $(".modal").append(height);
     var eyeColor = $("<h4>")
       .addClass("modal-text")
       .text("Eye Color: " + fields.eye_color);
     console.log(eyeColor);
-    $("body").append(eyeColor);
+    $(".modal").append(eyeColor);
     var homeWorld = $("<h4>")
       .addClass("modal-text")
       .text("Home World: " + fields.homeworld);
     console.log(homeWorld);
-    $("body").append(homeWorld);
+    $(".modal").append(homeWorld);
     var birthYear = $("<h4>")
       .addClass("modal-text")
       .text("Birth Year: " + fields.birth_year);
     console.log(birthYear);
-    $("body").append(birthYear);
-    // $("#trivia").append(
-    //   modal.append(
-    //     modalBody.append(modalTitle, name, height, eyeColor, homeWorld, birthYear)
-    //   )
-    // );
+    $(".modal").append(birthYear);
+    $("#trivia").append(
+      modal.append(
+        modalBody.append(modalTitle, name, height, eyeColor, homeWorld, birthYear)
+      )
+    );
   });
 }
 fetchTriviaFromSwapi("https://swapi.dev/api/people/25/");
@@ -54,3 +54,10 @@ fetchTriviaFromSwapi("https://swapi.dev/api/people/25/");
 // $(".prev-list").prepend(
 //     "<button class='prev-city mt-1'>" + fields + "</button>"
 //   );
+function openModal() {
+    console.log("modal click")
+
+
+    var output = `<div class="modal"><h1>Hi<h1></div>`;
+    $("#myModal").removeClass("hide");
+}
