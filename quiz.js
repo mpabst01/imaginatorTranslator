@@ -1,5 +1,6 @@
 // globals: questions is an array of questions objcets
 var currentQuestionIndex = 0;
+var modalFeaturesDiv = $("")
 var questionContainerDiv = $("#question-container");
 var correctAnswer = [];
 var modal = document.getElementById("myModal");
@@ -45,6 +46,11 @@ function showQuestion(){
         btn.val(choice);
         return btn;
     }
+}
+
+function showModalFeatures(){
+    
+
 }
 
 // render the first question
@@ -160,7 +166,7 @@ $(document).ready(function (event) {
         };
       });
     }
-    fetchTriviaFromSwapi("https://swapi.co/api/");
+    fetchTriviaFromSwapi("https://swapi.dev/api/");
   
     // localStorage.setItem(subject, subject);
     // $(".prev-list").prepend(

@@ -148,65 +148,96 @@ var quizDarkQuestions = [
   },
 ];
 
-// This function checks the response to each answer
-function checkAnswer(answer) {
-  correct = quizQuestions[currentQuestionIndex].correctAnswer;
-  if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
-    score++;
-    console.log("That is Correct!");
-    currentQuestionIndex++;
-    generateQuizQuestion();
-    //display in the results div that the answer is correct.
-  } else if (
-    answer !== correct &&
-    currentQuestionIndex !== finalQuestionIndex
-  ) {
-    console.log("That is not correct.");
-    currentQuestionIndex++;
-    generateQuizQuestion();
-    //display in the results div that the answer is wrong.
-  } else {
-    showScore();
+  // This conditional function cycles through the array containing the light-side quiz questions to generate the q&a and correct/incorrect answers
+  function generateLightQuizQuestion() {
+    if (currentLightQuestionIndex === finalLightQuestionIndex) {
+      // return showScore();
+    }
+    var currentLightQuestion = quizLightQuestions[currentLightQuestionIndex];
+    questionsLightElement.innerHTML =
+      "<p>" + currentLightQuestion.question + "</p>";
+
+    buttonBox.innerHTML = "";
+    currentLightQuestion.answers.forEach(function (answer) {
+      var button = document.createElement("button");
+      button.setAttribute("class", "answer");
+      button.setAttribute("value", answer);
+      button.textContent = answer;
+      button.onclick = questionClick;
+      buttonBox.appendChild(button);
+    });
+    console.log(currentLightQuestion);
   }
-}
-// Get the modal
-var modal = document.getElementById("myModal");
+  // This function checks the response to each light-side answer
+  function questionClick() {
+    console.log(this.value);
+    if (
+      this.value !== quizLightQuestions[currentLightQuestionIndex].correctAnswer
+    ) {
+      $(function () {
+        $("#myModal").modal();
+      });
+    }
+    currentQuestionIndex++;
+    if (currentLightQuestionIndex === quizLightQuestions.length) {
+      showScore();
+    }
+    generateLightQuizQuestion();
+  }
+  // This conditional function cycles through the array containing the dark-side quiz questions to generate the q&a and correct/incorrect answers
+  function generateDarkQuizQuestion() {
+    if (currentDarkQuestionIndex === finalDarkQuestionIndex) {
+      return showScore();
+    }
+    var currentDarkQuestion = quizDarkQuestions[currentDarkQuestionIndex];
+    questionsEl.innerHTML = "<p>" + currentDarkQuestion.question + "</p>";
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    buttonBox.innerHTML = "";
+    currentDarkQuestion.answers.forEach(function (answer) {
+      var button = document.createElement("button");
+      button.setAttribute("class", "answer");
+      button.setAttribute("value", answer);
+      button.textContent = answer;
+      button.onclick = questionClick;
+      buttonBox.appendChild(button);
+    });
+    console.log(currentDarkQuestion);
+  }
+  // This function checks the response to each answer
+  function questionClick() {
+    console.log(this.value);
+    if (
+      this.value !== quizDarkQuestions[currentDarkQuestionIndex].correctAnswer
+    ) {
+      $(function () {
+        $("#myModal").modal();
+      });
+    }
+    currentQuestionIndex++;
+    if (currentDarkQuestionIndex === quizDarkQuestions.length) {
+      showScore();
+    }
+    generateDarkQuizQuestion();
+  }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  //add event listener
+  // startLightSideQuizButton.addEventListener("click", function (event) {
+  //   window.location.href = "Students.html";
+  // });
+  // buttonA.addEventListener("click", function (event) {
+  //   window.location.href = "Students.html";
+  // });
+  // buttonB.addEventListener("click", function (event) {
+  //   window.location.href = "Students.html";
+  // });
+  // buttonC.addEventListener("click", function (event) {
+  //   window.location.href = "Students.html";
+  // });
+  // buttonD.addEventListener("click", function (event) {
+  //   window.location.href = "Students.html";
+  // });
 
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-function startQuiz() {
-  // hide start screen
-  var startScreenEl = document.getElementById("start-screen");
-  startScreenEl.setAttribute("class", "hide");
-
-  // un-hide questions section
-  questionsEl.removeAttribute("class");
-
-  getQuestion();
-}
-
-//add event listener
-startQuizButton.addEventListener("click", function (event) {
-  window.location.href = "Students.html";
-});
-buttonA.addEventListener("click", function (event) {
-  window.location.href = "Students.html";
-});
-buttonB.addEventListener("click", function (event) {
-  window.location.href = "Students.html";
+  // startLightSideQuizButton.addEventListener("click", startQuiz);
 });
 buttonC.addEventListener("click", function (event) {
   window.location.href = "Students.html";
