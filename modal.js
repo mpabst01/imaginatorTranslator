@@ -1,40 +1,38 @@
 const modal = {
   showModal: function (ev) {
     ev.preventDefault();
-    let modal = document.querySelector(".modal");
-    modal.classList.remove("off");
-    modal.classList.add("on");
+    let modal = $(".modal");
+    modal.removeClass("off");
+    modal.addClass("on");
   },
   showOverlay: function (ev) {
     ev.preventDefault();
-    let overlay = document.querySelector(".overlay");
-    overlay.classList.remove("hide");
-    overlay.classList.add("show");
+    let overlay = $(".overlay");
+    overlay.removeClass("hide");
+    overlay.addClass("show");
     this.showModal(ev);
   },
   hideModal: function (ev) {
-    let modal = document.querySelector(".modal");
-    modal.classList.remove("on");
-    modal.classList.add("off");
+    let modal = $(".modal");
+
+    modal.removeClass("on");
+    modal.addClass("off");
   },
   hideOverlay: function (ev) {
     ev.preventDefault();
     ev.stopPropagation();
-    let overlay = document.querySelector(".overlay");
-    overlay.classList.remove("show");
-    overlay.classList.add("hide");
+    let overlay = $(".overlay");
+    overlay.removeClass("show");
+    overlay.addClass("hide");
     this.hideModal(ev);
   },
-  init: function (ev) {
-    document.querySelector("p").addEventListener("click", function (event) {
-      modal.showOverlay(event);
+  init: function () {
+    $(".close-btn").on("click", function (ev) {
+      modal.hideOverlay(ev);
     });
-    document
-      .querySelector(".close-btn")
-      .addEventListener("click", function (ev) {
-        modal.hideOverlay(ev);
-      });
   },
 };
 
-document.addEventListener("DOMContentLoaded", () => modal.init());
+$(function () {
+  modal.init();
+});
