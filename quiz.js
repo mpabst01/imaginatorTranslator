@@ -26,6 +26,8 @@ correctAnswer: "Tattoine",
 triviaURL: "https://swapi.dev/api/planets/1/"
 */
 
+
+
 function showQuestion(){
     //adds questions to html
     var q = questions[currentQuestionIndex];
@@ -37,6 +39,7 @@ function showQuestion(){
     questionContainerDiv.append(renderButton(q.choiceB, "choice-b"));
     questionContainerDiv.append(renderButton(q.choiceC, "choice-c"));
     questionContainerDiv.append(renderButton(q.choiceD, "choice-d"));
+
     
 
 
@@ -48,8 +51,10 @@ function showQuestion(){
     }
 }
 
+
+
 function showModalFeatures(){
-    
+
 
 }
 
@@ -180,3 +185,14 @@ $(document).ready(function (event) {
       });
     }
   });
+
+
+  //show results at end
+  var names = [, , ,];
+  var scores = [88, 98, 77, 88];
+  var $ = function (id) { return document.getElementById(id); };
+  window.onload = function () {
+      $("add").onclick = addScore;
+      $("display_results").onclick = displayResults;
+      $("display_scores").onclick = displayScores;
+    };
