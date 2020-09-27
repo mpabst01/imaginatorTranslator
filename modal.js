@@ -1,20 +1,17 @@
 const modal = {
-  showModal: function (ev) {
-    ev.preventDefault();
+  showModal: function () {
     let modal = $(".modal");
     modal.removeClass("off");
     modal.addClass("on");
   },
-  showOverlay: function (ev) {
-    ev.preventDefault();
+  showOverlay: function () {
     let overlay = $(".overlay");
     overlay.removeClass("hide");
     overlay.addClass("show");
     this.showModal(ev);
   },
-  hideModal: function (ev) {
+  hideModal: function () {
     let modal = $(".modal");
-
     modal.removeClass("on");
     modal.addClass("off");
   },
@@ -25,6 +22,9 @@ const modal = {
     overlay.removeClass("show");
     overlay.addClass("hide");
     this.hideModal(ev);
+  },
+  getModalContent: function () {
+    return $(".modal-content");
   },
   init: function () {
     $(".close-btn").on("click", function (ev) {
