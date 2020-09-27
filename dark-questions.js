@@ -1,5 +1,62 @@
 $(document).ready(function (event) {
-    // swapi trivia for people
+  var questions = [
+    {
+      question: "Where does Wilhuff Tarkin call home?",
+      answers: ["A. Eriadu", "B. Bespin", "C. Coruscant", "D. Mustafar"],
+      correctAnswer: "A. Eriadu",
+      triviaURL: "https://swapi.dev/api/planets/21/",
+    },
+    {
+      question: "When was Darth Vader born?",
+      answers: ["A. 41.9BBY", "B. 64BBY", "C. 200BBY", "D. 54BBY"],
+      correctAnswer: "A. 41.9BBY",
+      triviaURL: "https://swapi.dev/api/people/10/",
+    },
+    {
+      question:
+        "What planet does Anakin Skywalker seek duel with Obi-Wan Kenobi?",
+      answers: [
+        "A. unknown",
+        "B. Mustafar",
+        "C. The Death Star",
+        "D. Polis Massa",
+      ],
+      correctAnswer: "B. Mustafar",
+      triviaURL: "https://swapi.dev/api/planets/13/",
+    },
+    {
+      question: "What color are Darth Maul's eyes?",
+      answers: ["A. black", "B. brown", "C. yellow", "D. blue"],
+      correctAnswer: "C. yellow",
+      triviaURL: "https://swapi.dev/api/people/44/",
+    },
+    {
+      question: "When was General Grievous born?",
+      answers: ["A. 200BBY", "B. 82BBY", "C. 41BBY", "D. unknown"],
+      correctAnswer: "D. unknown",
+      triviaURL: "https://swapi.dev/api/people/79/",
+    },
+    {
+      question: "How tall is Palpatine?",
+      answers: ["A. 160cm", "B. 150cm", "C. 170cm", "D. 180cm"],
+      correctAnswer: "C. 170cm",
+      triviaURL: "https://swapi.dev/api/species/21/",
+    },
+    {
+      question:
+        "What is the name of the shape shifting assassin hired to kill Padme Amidala?",
+      answers: [
+        "A. Lama Su",
+        "B. Zam Wesell",
+        "C. Taun We",
+        "D. Dexter Jettster",
+      ],
+      correctAnswer: "D. Dexter Jettster",
+      triviaURL: "https://swapi.dev/api/people/71/",
+    },
+  ];
+    
+  // swapi trivia for people
     function fetchTriviaFromSwapi(triviaURL) {
       // ajax request with the trivia url
       $.ajax({
