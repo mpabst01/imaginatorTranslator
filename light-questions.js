@@ -63,6 +63,6 @@ var questions = [
         choiceC: "Han Solo",
         choiceD: "All of the above",
         correctAnswer: "All of the above",
-        triviaURL: "https://swapi.dev/api/transport/10/"
+        triviaURL: "https://swapi.dev/api/starships/10/"
     }
 ];
