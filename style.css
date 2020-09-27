@@ -1,4 +1,5 @@
 /* BACKGROUND IMAGE FOR MAIN PAGE */
+
 .bg-image {
   background-image: url(1200px-Hyades.jpg);
   background-position: center center;
@@ -7,7 +8,9 @@
   background-size: cover;
   background-color: #464646;
 }
+
 /* BACKGROUND IMAGE FOR LIGHT SIDE PAGE */
+
 .bg-image1 {
   background-image: url(artwork_circumbinary_planet.jpg);
   background-position: center center;
@@ -18,6 +21,7 @@
 }
 
 /* BACKGROUND IMAGE FOR DARK SIDE PAGE */
+
 .bg-image2 {
   background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/03/7-1.png);
   background-position: center center;
@@ -28,6 +32,7 @@
 }
 
 /* BACKGROUND IMAGE FOR GAME OVER SCREEN */
+
 .bg-image3 {
   background-image: url(game-over-image.jpg);
   background-position: center center;
@@ -38,6 +43,7 @@
 }
 
 /* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
+
 .page-welcome {
   text-align: center;
   font-family: arial;
@@ -48,14 +54,13 @@
 }
 
 /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
-.header-main1,
-.header-main2 {
+
+.header-main1, .header-main2 {
   margin: 0 auto;
   text-align: center;
 }
 
-.header1-page-2,
-.header1-page-3 {
+.header1-page-2, .header1-page-3 {
   margin: 0 auto;
   text-align: center;
   padding: 30px 10px 10px 10px;
@@ -74,8 +79,8 @@
 }
 
 /* BUTTON STYLING MAIN PAGE */
-.light-side-image,
-.dark-side-image {
+
+.light-side-image, .dark-side-image {
   text-align: center;
   margin: 0 auto;
   padding: 20px;
@@ -87,44 +92,11 @@
   text-align: center;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 .question-container {
+  text-align: center;
+}
+
+.answers {
   text-align: center;
 }
 
@@ -132,56 +104,45 @@
   width: 100%;
 }
 
+.next-question-dark {
+  width: 100%;
+  color: white;
+}
+
+.dark-text {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: Tahoma;
+  color: white;
+  padding: 5px;
+}
+
+.light-text {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: Tahoma;
+  color: white;
+  padding: 5px;
+}
+
 /* LIGHT-SIDE PAGE BUTTON STYLING */
-.choice-a,
-.choice-b,
-.choice-c,
-.choice-d {
-  width: 225px;
-  display: inline;
+
+.choice-a, .choice-b, .choice-c, .choice-d {
+  width: 22%;
+  display: inline-block;
   text-align: center;
+}
+
+/* DARK-SIDE PAGE BUTTON STYLING */
+
+.dark-choice-a, .dark-choice-b, .dark-choice-c, .dark-choice-d {
+  width: 22%;
+  display: inline-block;
+  text-align: center;
+  color: white;
 }
 
 @media all and (max-width: 500px) {
   .card-list {
     /* On small screens, we are no longer using row direction but column */
     flex-direction: column;
-  }
-}
-
-.card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-  /* background-image: url('https://i.redd.it/b3esnz5ra34y.jpg'); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  transition: 0.4s;
-  padding: -20px;
-}
-.light-side-card {
-  background-image: url("./light-side.png");
-}
-
-.light-text {
-  color: white;
-  font-family: monaco;
-}
-
-.dark-text {
-  color: red;
-  font-family: monaco;
-}
-
-/* Mobile Responsiveness below */
-
-@media screen and (max-width: 600px) {
-  .page-welcome {
-    font-size: 12px;
   }
 }

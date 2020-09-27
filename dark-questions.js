@@ -1,5 +1,5 @@
 var questions = [
-    {
+  {
       question: "Where does Wilhuff Tarkin call home?",
       choiceA: "Bespin",
       choiceB: "Eriadu",
