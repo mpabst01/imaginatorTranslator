@@ -7,7 +7,7 @@ $(document).ready(function (event) {
   // fetchTriviaFromSwapi(testPerson);
   //   fetchTriviaFromSwapi(testSpecies);
   //   fetchTriviaFromSwapi(testPlanets);
-    // fetchTriviaFromSwapi(testStarships);
+    fetchTriviaFromSwapi(testStarships);
 });
 
 function fetchTriviaFromSwapi(triviaURL) {
