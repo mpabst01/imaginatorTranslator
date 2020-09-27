@@ -1,4 +1,3 @@
-//  === code to test fetchTriviaFromSwapi function ===
 $(document).ready(function (event) {
   var testPerson = "https://swapi.dev/api/people/44/";
   var testSpecies = "https://swapi.dev/api/species/21/";
@@ -8,10 +7,8 @@ $(document).ready(function (event) {
   // fetchTriviaFromSwapi(testPerson);
   //   fetchTriviaFromSwapi(testSpecies);
   //   fetchTriviaFromSwapi(testPlanets);
-  fetchTriviaFromSwapi(testStarships);
+    // fetchTriviaFromSwapi(testStarships);
 });
-
-// === end test code ===
 
 function fetchTriviaFromSwapi(triviaURL) {
   // ajax request with the trivia url
@@ -21,7 +18,6 @@ function fetchTriviaFromSwapi(triviaURL) {
   }).then(function (swapiData) {
     console.log(swapiData);
 
-    // create a ul
     var list = $("<ul>");
 
     var li = $("<li>").text("Name: " + swapiData.name);
@@ -53,44 +49,20 @@ function fetchTriviaFromSwapi(triviaURL) {
 
       li = $("<li>").text("Rotation Period: " + swapiData.rotation_period);
       list.append(li);
-    } else (triviaURL.includes("spaceships")) 
-      // model, manufacturer, starship_class, passengers
-      li = $("<li>").text("Model: " + swapiData.model);
-      list.append(li);
+    } else triviaURL.includes("spaceships");
 
-      li = $("<li>").text("Manufacturer: " + swapiData.manufacturer);
-      list.append(li);
+    li = $("<li>").text("Model: " + swapiData.model);
+    list.append(li);
 
-      li = $("<li>").text("Starship Class: " + swapiData.starship_class);
-      list.append(li);
+    li = $("<li>").text("Manufacturer: " + swapiData.manufacturer);
+    list.append(li);
 
-      li = $("<li>").text("Passengers: " + swapiData.passengers);
-      list.append(li);
-    
-    /* 
-MGLT: "75"
-cargo_capacity: "100000"
-consumables: "2 months"
-cost_in_credits: "100000"
-created: "2014-12-10T16:59:45.094000Z"
-crew: "4"
-edited: "2014-12-20T21:23:49.880000Z"
-films: (3) ["http://swapi.dev/api/films/1/", "http://swapi.dev/api/films/2/", "http://swapi.dev/api/films/3/"]
-hyperdrive_rating: "0.5"
-length: "34.37"
-manufacturer: "Corellian Engineering Corporation"
-max_atmosphering_speed: "1050"
-model: "YT-1300 light freighter"
-name: "Millennium Falcon"
-passengers: "6"
-pilots: (4) ["http://swapi.dev/api/people/13/", "http://swapi.dev/api/people/14/", "http://swapi.dev/api/people/25/", "http://swapi.dev/api/people/31/"]
-starship_class: "Light freighter"
-url: "http://swapi.dev/api/starships/10/"
-    */
-    // TODO (later issue): send request to get the homeworld and show it
+    li = $("<li>").text("Starship Class: " + swapiData.starship_class);
+    list.append(li);
 
-    // empty the modal
-    // append the ul to the modal
+    li = $("<li>").text("Passengers: " + swapiData.passengers);
+    list.append(li);
+
     var title = $("<h3>").text("The answer is ...");
     modal.getModalContent().empty().append(title, list);
 
