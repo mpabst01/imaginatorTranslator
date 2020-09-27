@@ -4,7 +4,7 @@ var modalFeaturesDiv = $("modal off")
 var questionContainerDiv = $("#question-container");
 var correctAnswer = [];
 var modal = document.getElementById("myModal");
-var myScore;
+var score;
 
 
 /* 
@@ -70,15 +70,51 @@ questionContainerDiv.on("click", ".q-choice", function() {
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     if (q.correctAnswer === $(this.val())) {
         //update score
-        myScore++;
+        score++;
         currentQuestionIndex++;
         //display modal
+        
         $(function () {
-            $("#myModal").modal();
+            const showModal = (ev) => {
+                ev.preventDefault();
+                let modal = document.querySelector(".modal");
+                modal.classList.remove("off");
+                modal.classList.add("on");
+              };
+              const showOverlay = (ev) => {
+                ev.preventDefault();
+                let overlay = document.querySelector(".overlay");
+                overlay.classList.remove("hide");
+                overlay.classList.add("show");
+                showModal(ev);
+              };
+              const hideModal = (ev) => {
+                  let modal = document.querySelector(".modal");
+                  modal.classList.remove ("on");
+                  modal. classList.add("off");
+              };
+              const hideOverlay = (ev) => {
+                ev.preventDefault();
+                ev.stopPropagation();
+                let overlay = document.querySelector(".overlay");
+                overlay.classList.remove("show");
+                overlay.classList.add("hide");
+                hideModal(ev);
+              };
+              
+              const init = (ev)=> {
+                document.querySelector("p").addEventListener("click", showOverlay);
+              
+                document.querySelector(".close-btn").addEventListener("click", hideOverlay);
+              };
+              
+              document.addEventListener("DOMContentLoaded", init);
+              
+
         });
 
     } else {
-        console.log(myScore)
+        console.log(score)
         // answer is incorrect
         // update the score
         //display modal
@@ -190,7 +226,7 @@ $(document).ready(function (event) {
 
   //show results at end
   var names = [, , ,];
-  var scores = [88, 98, 77, 88];
+  var scores = [, , , ];
   var $ = function (id) { return document.getElementById(id); };
   window.onload = function () {
       $("add").onclick = addScore;
