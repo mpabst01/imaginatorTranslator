@@ -87,6 +87,7 @@
   text-align: center;
 }
 
+<<<<<<< Updated upstream
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -116,6 +117,11 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+=======
+.question-container {
+  text-align: center;
+  color: yellow;
+>>>>>>> Stashed changes
 }
 
 .close:hover,
@@ -168,14 +174,30 @@
   background-image: url("./light-side.png");
 }
 
+<<<<<<< Updated upstream
 .light-text {
+=======
+.light-text, .q-choice-active{
+  background-color: rgba(255, 255, 255, 0.1);
+  font-family: Tahoma;
+>>>>>>> Stashed changes
   color: white;
   font-family: monaco;
 }
 
+<<<<<<< Updated upstream
 .dark-text {
   color: red;
   font-family: monaco;
+=======
+/* LIGHT-SIDE PAGE BUTTON STYLING */
+
+.choice-a, .choice-b, .choice-c, .choice-d, .q-choice-active {
+  width: 22%;
+  display: inline-block;
+  text-align: center;
+
+>>>>>>> Stashed changes
 }
 
 /* Mobile Responsiveness below */

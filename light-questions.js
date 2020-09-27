@@ -5,7 +5,7 @@ var questions = [
         choiceB: "Alderaan",
         choiceC: "Bespin",
         choiceD: "Naboo",
-        correctAnswer: "Tattoine",
+        correctAnswer: "Tattooine",
         triviaURL: "https://swapi.dev/api/planets/1/"
     },
     {
