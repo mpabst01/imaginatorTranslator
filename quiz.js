@@ -1,7 +1,6 @@
 // globals: questions is an array of questions objcets
 var currentQuestionIndex = 0;
 var questionContainerDiv = $("#question-container");
-var nextQDiv = $("#nextQ");
 var correctAnswer = [];
 var modal = document.getElementById("myModal");
 var myScore;
@@ -31,14 +30,13 @@ function showQuestion(){
     var q = questions[currentQuestionIndex];
     questionContainerDiv.append("<h1>Question:</h1>");
     questionContainerDiv.append("<h5 class='w3-padding-32'>" + q.question + "</h5>");
-    nextQDiv.append("<h3 class='nextBtn'>" + Next + "</h3>");
     
     //adds question's answers as buttons to html page
     questionContainerDiv.append(renderButton(q.choiceA, "choice-a"));
     questionContainerDiv.append(renderButton(q.choiceB, "choice-b"));
     questionContainerDiv.append(renderButton(q.choiceC, "choice-c"));
     questionContainerDiv.append(renderButton(q.choiceD, "choice-d"));
-    nextQDiv.append(nextButton(styleNext));
+    
 
 
     function renderButton(choice, choiceClass){
@@ -46,13 +44,6 @@ function showQuestion(){
         var btn = $("<button>").addClass(btnClass + " " + choiceClass).text(choice);
         btn.val(choice);
         return btn;
-    }
-    function nextButton(styleNext){
-        var styleInfo = "w3-button w3-black w3-padding-large w3-large w3-margin-top next-question";
-        var nextBtn = $("<button>").addClass(styleInfo).text(styleNext);
-        nextBtn.val(styleNext);
-        return nextBtn;
-
     }
 }
 
@@ -169,7 +160,7 @@ $(document).ready(function (event) {
         };
       });
     }
-    fetchTriviaFromSwapi("https://swapi.dev/api/people/25/");
+    fetchTriviaFromSwapi("https://swapi.co/api/");
   
     // localStorage.setItem(subject, subject);
     // $(".prev-list").prepend(
