@@ -1,6 +1,6 @@
 // globals: questions is an array of questions objcets
 var currentQuestionIndex = 0;
-var modalFeaturesDiv = $("")
+var modalFeaturesDiv = $("modal off")
 var questionContainerDiv = $("#question-container");
 var correctAnswer = [];
 var modal = document.getElementById("myModal");
@@ -50,16 +50,17 @@ function showQuestion(){
         return btn;
     }
 }
+// render the first question
+showQuestion();
 
 
 
 function showModalFeatures(){
-
-
+    modalFeaturesDiv.append("<ul>Trivia from Swapi.api. The answer is...</ul><li>Name:</li><li>Height: cm</li><li>Eye Color:</li><li>Home World:</li><li>Birth Year:</li><button class='close-btn'>Close</button>");
 }
+showModalFeatures();
 
-// render the first question
-showQuestion();
+
 
 // when user clicks on an answer
 questionContainerDiv.on("click", ".q-choice", function() {
