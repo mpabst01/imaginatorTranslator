@@ -60,6 +60,6 @@ var questions = [
       choiceC: "1,600",
       choiceD: "120,000",
       correctAnswer: "120,000",
-      triviaURL: "https://swapi.dev/api/transport/9/"
+      triviaURL: "https://swapi.dev/api/starships/9/"
     },
 ];
