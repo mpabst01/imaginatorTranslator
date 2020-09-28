@@ -41,7 +41,13 @@
   background-size: cover;
   background-color: #464646;
 }
-
+.group-photo {
+  text-align: center;
+}
+.photo {
+  border-radius: 5%;
+  border: solid white;
+}
 /* WELCOME PAGE DETAILING TEXT INFORMATION ABOUT PAGE */
 
 .page-welcome {
@@ -55,12 +61,14 @@
 
 /* Centers the STAR WARS and THE GALACTIC GAME headers on page */
 
-.header-main1, .header-main2 {
+.header-main1,
+.header-main2 {
   margin: 0 auto;
   text-align: center;
 }
 
-.header1-page-2, .header1-page-3 {
+.header1-page-2,
+.header1-page-3 {
   margin: 0 auto;
   text-align: center;
   padding: 30px 10px 10px 10px;
@@ -80,7 +88,8 @@
 
 /* BUTTON STYLING MAIN PAGE */
 
-.light-side-image, .dark-side-image {
+.light-side-image,
+.dark-side-image {
   text-align: center;
   margin: 0 auto;
   padding: 20px;
