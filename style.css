@@ -88,7 +88,7 @@
   display: inline-block;
 }
 
-/* .buttons {
+.buttons {
   text-align: center;
 }
 
@@ -107,18 +107,32 @@
 .next-question-dark {
   width: 100%;
   color: white;
-} */
-
-
+}
 
 .light-text {
   background-color: rgba(255, 255, 255, 0.1);
   font-family: Tahoma;
   color: white;
   padding: 5px;
+}
 
+.force {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  font-family: Courier;
+  font-size: 17px;
+  color: white;
+}
 
 /* Style the button for answer chosen by the user */
+
 .q-choice-active:disabled {
   opacity: 0.8;
 }
