@@ -35,10 +35,17 @@ THEN a final game over page is displayed
 
 
 ## App Screenshot
+<<<<<<< HEAD
 <img src="starwars-screenshot.jpg" alt="Home Page Quiz Screenshot">
+=======
+
+>>>>>>> 52576ad2e48de239be6a6817e8de80a767c6ca05
 <img src="dark-quiz-screenshot.jpg" alt="Darkside Quiz Screenshot">
 <img src="light-quiz-screenshot.jpg" alt="Lightside Quiz Screenshot">
 <img src="gameover-Screenshot.png" alt="Game Over Screenshot">
+
+<!-- <img src="05-third-party-apis-homework-demo.gif" alt="Daily Scheduler Gif"> -->
+
 
 ## Live Site Demo
 https://mpabst01.github.io/starWarsTrivia/ 
