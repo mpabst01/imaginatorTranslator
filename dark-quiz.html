@@ -19,7 +19,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="modal.css" />
-    <link rel="stylesheet" href="dark-quiz.css">
+    <link rel="stylesheet" href="dark-quiz.css" />
   </head>
 
   <!-- STAR WARS DARK SIDE HEADER STYLE -->
@@ -38,7 +38,7 @@
     /></a>
   </div>
 
-  <body style="color: white" class="bg-image2">
+  <body class="bg-image2">
     <!--- MAIN QUESTION / ANSWER CONTAINER -->
     <div
       id="score"
@@ -47,7 +47,7 @@
       Score:
     </div>
     <div class="w3-row-padding w3-padding-64 w3-container score-dark">
-      <div id="question-container" class="w3-content"></div>
+      <div style="color: white" id="question-container" class="w3-content"></div>
     </div>
     <div>
       <form class="giphy-search">
@@ -72,8 +72,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="dark-questions.js"></script>
-    <script src="modal.js"></script>
     <script src="giphy-api.js"></script>
+    <script src="modal.js"></script>
     <script src="swapi.js"></script>
     <script src="quiz.js"></script>
   </body>
