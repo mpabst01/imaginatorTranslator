@@ -132,7 +132,7 @@ questionContainerDiv.on("click", ".q-choice", function() {
         // });
     }
 
-    alert(q.triviaURL)
+    fetchTriviaFromSwapi(q.triviaURL)
 
     // the modal should be handle in another issue once Nilou's work has been merged.
     // alert trivia url modal stuff

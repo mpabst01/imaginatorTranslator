@@ -1,15 +1,3 @@
-$(document).ready(function (event) {
-  var testPerson = "https://swapi.dev/api/people/44/";
-  var testSpecies = "https://swapi.dev/api/species/21/";
-  var testPlanets = "https://swapi.dev/api/planets/21/";
-  var testStarships = "https://swapi.dev/api/starships/10/";
-
-  // fetchTriviaFromSwapi(testPerson);
-  //   fetchTriviaFromSwapi(testSpecies);
-  //   fetchTriviaFromSwapi(testPlanets);
-    fetchTriviaFromSwapi(testStarships);
-});
-
 function fetchTriviaFromSwapi(triviaURL) {
   // ajax request with the trivia url
   $.ajax({
@@ -49,20 +37,19 @@ function fetchTriviaFromSwapi(triviaURL) {
 
       li = $("<li>").text("Rotation Period: " + swapiData.rotation_period);
       list.append(li);
-    } else triviaURL.includes("spaceships");
+    } else if (triviaURL.includes("spaceships")) {
+      li = $("<li>").text("Model: " + swapiData.model);
+      list.append(li);
 
-    li = $("<li>").text("Model: " + swapiData.model);
-    list.append(li);
+      li = $("<li>").text("Manufacturer: " + swapiData.manufacturer);
+      list.append(li);
 
-    li = $("<li>").text("Manufacturer: " + swapiData.manufacturer);
-    list.append(li);
+      li = $("<li>").text("Starship Class: " + swapiData.starship_class);
+      list.append(li);
 
-    li = $("<li>").text("Starship Class: " + swapiData.starship_class);
-    list.append(li);
-
-    li = $("<li>").text("Passengers: " + swapiData.passengers);
-    list.append(li);
-
+      li = $("<li>").text("Passengers: " + swapiData.passengers);
+      list.append(li);
+    }
     var title = $("<h3>").text("The answer is ...");
     modal.getModalContent().empty().append(title, list);
 
