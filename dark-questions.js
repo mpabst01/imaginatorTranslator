@@ -15,7 +15,7 @@ var questions = [
       choiceC: "200BBY",
       choiceD: "54BBY",
       correctAnswer: "41.9BBY",
-      triviaURL: "https://swapi.dev/api/people/10/"
+      triviaURL: "https://swapi.dev/api/people/4/"
     },
     {
       question: "What planet does Anakin Skywalker seek duel with Obi-Wan Kenobi?",
@@ -51,7 +51,7 @@ var questions = [
       choiceC: "170",
       choiceD: "180",
       correctAnswer: "170",
-      triviaURL: "https://swapi.dev/api/species/21/"
+      triviaURL: "https://swapi.dev/api/people/21/"
     },
     {
       question: "How long is the Death Star?",
