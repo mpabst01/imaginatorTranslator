@@ -88,7 +88,7 @@
   display: inline-block;
 }
 
-.buttons {
+/* .buttons {
   text-align: center;
 }
 
@@ -107,38 +107,16 @@
 .next-question-dark {
   width: 100%;
   color: white;
-}
+} */
 
-.dark-text {
-  background-color: rgba(255, 255, 255, 0.2);
-  font-family: Tahoma;
-  color: white;
-  padding: 5px;
-}
+
 
 .light-text {
   background-color: rgba(255, 255, 255, 0.1);
   font-family: Tahoma;
   color: white;
   padding: 5px;
-}
 
-/* LIGHT-SIDE PAGE BUTTON STYLING */
-
-.choice-a, .choice-b, .choice-c, .choice-d {
-  width: 22%;
-  display: inline-block;
-  text-align: center;
-}
-
-/* DARK-SIDE PAGE BUTTON STYLING */
-
-.dark-choice-a, .dark-choice-b, .dark-choice-c, .dark-choice-d {
-  width: 22%;
-  display: inline-block;
-  text-align: center;
-  color: white;
-}
 
 /* Style the button for answer chosen by the user */
 .q-choice-active:disabled {
